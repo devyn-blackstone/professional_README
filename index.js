@@ -1,19 +1,19 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
 inquirer
   .prompt([
     {
-      type: 'input',
-      message: 'What is your project title?',
-      name: 'Title',
+        type: 'input',
+        message: 'What is your project title?',
+        name: 'Title',
     },
     {
-      type: 'input',
-      message: 'Provide short description of your project',
-      name: 'Description',
+        type: 'input',
+        message: 'Provide short description of your project:',
+        name: 'Description',
     },
     {
         type: 'input',
@@ -31,25 +31,23 @@ inquirer
         name: 'Credits',
     },
     {
-        type: 'input',
+        type: 'list',
         message: 'Provide license info:',
         name: 'License',
+        choices: ['MIT', "Apache", 'GPL', "other/none"]
     },
     {
         type: 'input',
-        message: 'List for badges:',
-        name: 'Badges',
+        message: 'What is your github username?',
+        name: 'Github',
+    },
+    {
+        type: 'input',
+        message: 'What is your email?',
+        name: 'Email',
     },
 ])
-    .then((response) =>
-    fs.appendFile('log.txt', JSON.stringify(response), (error) => error ? console.error(error) : console.log(response)
-    )
+    .then((data) =>
+        fs.writeFile('README.md', generateMarkdown(data), (error) => error ? console.error(error) : console.log("Using info provided to make README file...")
+        )
     );
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
