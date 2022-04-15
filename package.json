@@ -1,14 +1,22 @@
 {
-  "name": "professional-readme",
+  "name": "professional_readme",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordond27/professional_README.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordond27/professional_README/issues"
+  },
+  "homepage": "https://github.com/jordond27/professional_README#readme",
   "dependencies": {
     "inquirer": "^8.2.2"
   }
