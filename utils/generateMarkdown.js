@@ -10,7 +10,7 @@ function renderLicenseBadge(license) {
     return "[![License](https://img.shields.io/badge/license-GPL-blueviolet)](https://www.gnu.org/licenses/gpl-3.0.en.html)";
   }
   else {
-    return "[![License](https://img.shields.io/badge/%20no%20license-unlicense-blueviolet)]";
+    return "[![License](https://img.shields.io/badge/%20no%20license-unlicense-blueviolet)](https://choosealicense.com/no-permission/)";
   }
 };
 
