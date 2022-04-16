@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+//function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if(license === "MIT" ){
     return "[![License](https://img.shields.io/badge/license-MIT-blueviolet)](https://choosealicense.com/licenses/mit/)";
@@ -15,41 +14,50 @@ function renderLicenseBadge(license) {
   }
 };
 
-// TODO: Create a function to generate markdown for README
+//function to generate markdown for README that pulls the answers provided 
 function generateMarkdown(data) {
   return `# ${data.Title}
 
   ## Description
 
   ${data.Description}
+  ${data.License}
 
   ## Table of Contents
 
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
+  - [Contribution](#contribution)
+  - [Tests]
   - [License](#license)
+  - [Questions]
 
   ## Installation
 
-  ${data.Installation}
+  ${data.Install}
 
   ## Usage
 
   ${data.Usage}
 
-  ## Credits
+  ## Contribution
 
-  ${data.Credits}
+  ${data.Contributions}
+
+  ## Tests
+
+  ${data.Tests}
 
   ## License
 
-  ${renderLicenseBadge(data.License)}
+  ${renderLicenseBadge(data.License)} 
+  Click for more information about this license
 
   ---
 
-  ## Contact
+  ## Questions
 
+  For further clarifications or questions, I can be reached at:
   ${data.Email}
 
   ${data.Github}

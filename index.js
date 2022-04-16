@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
+// pull packages being used to main file
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+// list of all the quetions - using the prompt feature from inquirer
 inquirer
   .prompt([
     {
@@ -17,7 +18,7 @@ inquirer
     },
     {
         type: 'input',
-        message: 'What are the steps required for installation?',
+        message: 'What are the steps required for installation? What command is used to install dependencies?',
         name: 'Install',
     },
     {
@@ -27,8 +28,13 @@ inquirer
     },
     {
         type: 'input',
-        message: 'List your collaborators:',
-        name: 'Credits',
+        message: 'How can someone contribute to the repo?',
+        name: 'Contributions',
+    },
+    {
+        type: 'input',
+        message: 'What command should be used to run tests?',
+        name: 'Tests',
     },
     {
         type: 'list',
@@ -47,6 +53,7 @@ inquirer
         name: 'Email',
     },
 ])
+// after all the questions are answered, create a readme file, run through the generateMarkdown function using the answers from the questions
     .then((data) =>
         fs.writeFile('README.md', generateMarkdown(data), (error) => error ? console.error(error) : console.log("Using info provided to make README file...")
         )
