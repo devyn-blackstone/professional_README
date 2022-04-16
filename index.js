@@ -40,7 +40,7 @@ inquirer
         type: 'list',
         message: 'Provide license info:',
         name: 'License',
-        choices: ['MIT', "Apache", 'GPL', "other/none"]
+        choices: ['MIT', "Apache", 'GNU General Public License', "other/none"]
     },
     {
         type: 'input',

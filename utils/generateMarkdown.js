@@ -6,13 +6,17 @@ function renderLicenseBadge(license) {
   else if (license === "Apache"){
     return "[![License](https://img.shields.io/badge/license-Apache-blueviolet)](https://opensource.org/licenses/Apache-2.0)";
   }
-  else if (license === "GPL"){
-    return "[![License](https://img.shields.io/badge/license-GPL-blueviolet)]()";
+  else if (license === "GNU General Public License"){
+    return "[![License](https://img.shields.io/badge/license-GPL-blueviolet)](https://www.gnu.org/licenses/gpl-3.0.en.html)";
   }
   else {
     return "[![License](https://img.shields.io/badge/%20no%20license-unlicense-blueviolet)]";
   }
 };
+
+function getGithub (username){
+  return "https://github.com/" + username;
+}
 
 //function to generate markdown for README that pulls the answers provided 
 function generateMarkdown(data) {
@@ -20,17 +24,17 @@ function generateMarkdown(data) {
 
   ## Description
 
-  ${data.Description}
-  ${data.License}
+  ${data.Description} \n
+  ${renderLicenseBadge(data.License)} \n
 
   ## Table of Contents
 
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
-  - [Tests]
+  - [Tests](#tests)
   - [License](#license)
-  - [Questions]
+  - [Questions](#questions)
 
   ## Installation
 
@@ -50,17 +54,17 @@ function generateMarkdown(data) {
 
   ## License
 
-  ${renderLicenseBadge(data.License)} 
-  Click for more information about this license
+  ${renderLicenseBadge(data.License)} \n
+  Click the license badge for more information about this license
 
   ---
 
   ## Questions
 
-  For further clarifications or questions, I can be reached at:
-  ${data.Email}
-
-  ${data.Github}
+  For further clarifications or questions, I can be reached at: \n
+  Email: ${data.Email}
+  \n
+  Github: ${getGithub(data.Github)}
   `
 }
 

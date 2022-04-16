@@ -2,36 +2,50 @@
 
   ## Description
 
-  
+   
+
+  [![License](https://img.shields.io/badge/license-MIT-blueviolet)](https://choosealicense.com/licenses/mit/) 
+
 
   ## Table of Contents
 
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
+  - [Contribution](#contribution)
+  - [Tests](#tests)
   - [License](#license)
+  - [Questions](#questions)
 
   ## Installation
 
-  undefined
+  
 
   ## Usage
 
   
 
-  ## Credits
+  ## Contribution
+
+  
+
+  ## Tests
 
   
 
   ## License
 
-  [![License](https://img.shields.io/badge/license-MIT-blueviolet)](https://choosealicense.com/licenses/mit/)
+  [![License](https://img.shields.io/badge/license-MIT-blueviolet)](https://choosealicense.com/licenses/mit/) 
+
+  Click the license badge for more information about this license
 
   ---
 
-  ## Contact
+  ## Questions
 
+  For further clarifications or questions, I can be reached at: 
+
+  Email: 
   
 
-  
+  Github: https://github.com/jordond27
   
